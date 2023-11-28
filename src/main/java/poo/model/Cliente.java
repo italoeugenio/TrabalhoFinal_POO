@@ -1,3 +1,5 @@
+package poo.model;
+
 public class Cliente extends Pessoa {
 private int numeroDeCompras;
 

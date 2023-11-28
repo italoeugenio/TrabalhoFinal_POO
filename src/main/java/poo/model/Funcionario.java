@@ -1,3 +1,4 @@
+package poo.model;
 public class Funcionario extends Pessoa {
 private double salario;
 
