@@ -15,12 +15,12 @@ public class Pessoa {
     private String nome;
     private String email;
     private Integer idade;
-
-   Integer numero = 0;
-   String rua;
+    String rua;
+    String cidade;
+    String estado;
 
  
-   
+
 
     public Pessoa() {
     }
@@ -34,6 +34,9 @@ public class Pessoa {
 
       public void adicionarEndereco(Endereco endereco){
         this.rua = endereco.rua;
+        this.cidade = endereco.cidade;
+        this.estado = endereco.estado;
+        System.out.println(this.cidade);
    }
 
 

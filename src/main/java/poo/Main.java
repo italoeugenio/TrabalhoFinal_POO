@@ -11,8 +11,8 @@ public class Main {
 
         // Criando e salvando um usuário
         Pessoa pessoa = new Pessoa("Jota", "jota@email.com", 11);
-        Endereco ed = new Endereco();
-        ed.rua = "poha";
+        Endereco ed = new Endereco("a", "b", "c");
+
         pessoa.adicionarEndereco(ed);
         pessoaDAO.salvarPessoa(pessoa);
 
