@@ -1,6 +1,7 @@
 package poo;
 
 import poo.dao.PessoaDAO;
+import poo.model.Endereco;
 import poo.model.Pessoa;
 
 public class Main {
@@ -10,6 +11,9 @@ public class Main {
 
         // Criando e salvando um usuário
         Pessoa pessoa = new Pessoa("Jota", "jota@email.com", 11);
+        Endereco ed = new Endereco();
+        ed.rua = "poha";
+        pessoa.adicionarEndereco(ed);
         pessoaDAO.salvarPessoa(pessoa);
 
         // Recuperando e atualizando o usuário
@@ -20,7 +24,7 @@ public class Main {
         pessoaDAO.atualizarPessoa(pessoaEncontrada);
 
         // Deletando o usuário
-        pessoaDAO.deletarPessoa(pessoaEncontrada);
+        // pessoaDAO.deletarPessoa(pessoaEncontrada);
 
         Pessoa pessoaEncontrada2 = pessoaDAO.getPessoaById(pessoa.getId());
         System.out.println("Pessoa: " + pessoaEncontrada2);
