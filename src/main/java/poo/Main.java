@@ -6,11 +6,10 @@ import poo.model.Pessoa;
 public class Main {
     
     public static void main(String[] args) {
-        System.out.println("Teste");
         PessoaDAO pessoaDAO = new PessoaDAO();
 
         // Criando e salvando um usuário
-        Pessoa pessoa = new Pessoa();
+        Pessoa pessoa = new Pessoa("Jota", "jota@email.com");
         pessoaDAO.salvarPessoa(pessoa);
 
         // Recuperando e atualizando o usuário
