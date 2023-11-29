@@ -14,14 +14,16 @@ public class Pessoa {
 
     private String nome;
     private String email;
+    private Integer idade;
 
 
     public Pessoa() {
     }
 
-    public Pessoa(String nome, String email) {
+    public Pessoa(String nome, String email, Integer idade) {
         this.nome = nome;
         this.email = email;
+        this.idade = idade;
     }
 
     public Long getId() {
@@ -47,6 +49,16 @@ public class Pessoa {
     public void setEmail(String email) {
         this.email = email;
     }
+
+     public Integer getIdade() {
+        return this.idade;
+    }
+
+    public void setIdade(Integer idade) {
+        this.idade = idade;
+    }
+
+    
 
     @Override
     public String toString() {

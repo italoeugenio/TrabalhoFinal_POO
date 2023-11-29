@@ -9,7 +9,7 @@ public class Main {
         PessoaDAO pessoaDAO = new PessoaDAO();
 
         // Criando e salvando um usuário
-        Pessoa pessoa = new Pessoa("Jota", "jota@email.com");
+        Pessoa pessoa = new Pessoa("Jota", "jota@email.com", 11);
         pessoaDAO.salvarPessoa(pessoa);
 
         // Recuperando e atualizando o usuário
