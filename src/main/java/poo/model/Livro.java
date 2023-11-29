@@ -46,4 +46,16 @@ public class Livro extends Autor{
     public void setNome(String nome) {
         this.titulo = nome;
     }
+    
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "id=" + id +
+                ", titulo='" + titulo + '\'' +
+                ", nomeAutor='" + nomeAutor + '\'' +
+                ", nomeFaculdade='" + nomeFaculdade + '\'' +
+                ", enderecoFaculdade='" + enderecoFaculdade + '\'' +
+                '}';
+    }
+
 }
