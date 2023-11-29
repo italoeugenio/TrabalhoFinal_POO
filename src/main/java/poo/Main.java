@@ -95,12 +95,13 @@ public class Main {
     private static void atualizarLivro(Scanner scanner, Crud crud) {
         System.out.print("Digite o ID do livro a ser atualizado: ");
         Long id = scanner.nextLong();
-
+        scanner.nextLine();
+        
         Livro livroEncontrado = crud.getLivroById(id);
 
         if (livroEncontrado != null) {
             System.out.print("Digite o novo título do livro: ");
-            String novoTitulo = scanner.next();
+            String novoTitulo = scanner.nextLine();
             livroEncontrado.setNome(novoTitulo);
 
             crud.atualizarLivro(livroEncontrado);
