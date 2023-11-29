@@ -7,7 +7,14 @@ import poo.model.Livro;
 import java.util.Scanner;
 
 public class Main {
-
+    /*
+    Pessoas que participaram da produção do trabalho:
+    -Joel Alves dos Santos (UC22102248)
+    -Ítalo Cezar Eugênio de Santana (UC22102126)
+    -Jairo Pereira de Sousa Júnior (UC22101494)
+    -Kauã Miguel Costa Matos (UC22101679)
+    -Mirelle Alves Sine (UC22101838)
+    */
     public static void main(String[] args) {
         Crud crud = new Crud();
         Scanner scanner = new Scanner(System.in);
