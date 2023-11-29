@@ -1,36 +1,36 @@
 package poo;
 
-import poo.dao.PessoaDAO;
-import poo.model.Endereco;
-import poo.model.Pessoa;
+import poo.dao.Crud;
+import poo.model.Autor;
+import poo.model.Faculdade;
+import poo.model.Livro;
 
 public class Main {
     
     public static void main(String[] args) {
-        PessoaDAO pessoaDAO = new PessoaDAO();
+        Crud Crud = new Crud();
 
         // Criando e salvando um usuário
-        Pessoa pessoa = new Pessoa("Jota", "jota@email.com", 11);
-        Endereco ed = new Endereco("a", "b", "c");
+        Autor autor = new Autor("", "", "");
+        Faculdade faculdade = new Faculdade("", "");
+        Livro livro = new Livro("", autor, faculdade);
 
-        pessoa.adicionarEndereco(ed);
-        pessoaDAO.salvarPessoa(pessoa);
+        Crud.salvarLivro(livro);
 
         // Recuperando e atualizando o usuário
-        Pessoa pessoaEncontrada = pessoaDAO.getPessoaById(pessoa.getId());
-        System.out.println("Pessoa encontrada: " + pessoaEncontrada);
+        Livro LivroEncontrada = Crud.getLivroById(livro.getId());
+        System.out.println("Livro encontrada: " + LivroEncontrada);
 
-        pessoaEncontrada.setEmail("jota.2@email.com");
-        pessoaDAO.atualizarPessoa(pessoaEncontrada);
+        Crud.atualizarLivro(LivroEncontrada);
 
         // Deletando o usuário
-        // pessoaDAO.deletarPessoa(pessoaEncontrada);
+        Crud.deletarLivro(LivroEncontrada);
 
-        Pessoa pessoaEncontrada2 = pessoaDAO.getPessoaById(pessoa.getId());
-        System.out.println("Pessoa: " + pessoaEncontrada2);
+        Livro LivroEncontrada2 = Crud.getLivroById(livro.getId());
+        System.out.println("Livro: " + LivroEncontrada2);
 
         // Fechando a sessão do Hibernate
-        pessoaDAO.close();
+        Crud.close();
     }
 
 }

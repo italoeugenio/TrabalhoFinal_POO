@@ -19,7 +19,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <!-- Mapeamento das Entidades -->
-        <mapping class="poo.model.Pessoa"/>
+        <mapping class="poo.model.Livro"/>
 
     </session-factory>
 </hibernate-configuration>

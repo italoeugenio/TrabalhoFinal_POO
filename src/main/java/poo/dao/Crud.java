@@ -5,9 +5,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import poo.model.Pessoa;
+import poo.model.Livro;
 
-public class PessoaDAO {
+public class Crud {
 
     private static final SessionFactory sessionFactory;
 
@@ -25,11 +25,11 @@ public class PessoaDAO {
         sessionFactory.close();
     }
 
-    public void salvarPessoa(Pessoa pessoa) {
+    public void salvarLivro(Livro Livro) {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.save(pessoa);
+            session.save(Livro);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -39,17 +39,17 @@ public class PessoaDAO {
         }
     }
 
-    public Pessoa getPessoaById(Long id) {
+    public Livro getLivroById(Long id) {
         try (Session session = sessionFactory.openSession()) {
-            return session.get(Pessoa.class, id);
+            return session.get(Livro.class, id);
         }
     }
 
-    public void atualizarPessoa(Pessoa pessoa) {
+    public void atualizarLivro(Livro Livro) {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.update(pessoa);
+            session.update(Livro);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
@@ -59,11 +59,11 @@ public class PessoaDAO {
         }
     }
 
-    public void deletarPessoa(Pessoa pessoa) {
+    public void deletarLivro(Livro Livro) {
         Transaction transaction = null;
         try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
-            session.delete(pessoa);
+            session.delete(Livro);
             transaction.commit();
         } catch (Exception e) {
             if (transaction != null) {
